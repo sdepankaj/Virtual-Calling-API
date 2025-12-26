@@ -34,7 +34,7 @@ app.post("/start-call", async (req, res) => {
     });
   } catch (error) {
     console.error("CALL ERROR:", error);
-    res.status(500).json({ error: "Failed to start call" });
+    res.status(500).json({ error: error, message: "Failed to start call" });
   }
 });
 
